@@ -1,0 +1,15 @@
+.img-height {
+    border-radius: 1rem;
+}
+
+@media(min-width: 576px) {
+    
+
+    .img-height {
+        height: 20rem;
+        width: 20rem;
+        display: block;
+        margin: 0 auto;
+        object-fit: fill;
+    }
+}
