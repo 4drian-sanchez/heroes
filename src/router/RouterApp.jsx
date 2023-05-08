@@ -1,17 +1,19 @@
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
 import { LoginPage } from "../auth/Pages/LoginPage";
 import { ErrorPage, MarvelPage, DcPage, HomePage, SearchPage, HeroPage } from "../heroes";
 import { HeroesApp } from "../HeroesApp";
 import { PrivateRuoter } from './PrivateRuoter'
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+import { PublicRouter } from "./PublicRouter";
+
 export const RouterApp = () => {
 
     const router = createBrowserRouter([
         {
             path: 'login',
-            element: <LoginPage />,
+            element: <PublicRouter>  <LoginPage /> </PublicRouter>,
             errorElement: <ErrorPage />,
 
         },
